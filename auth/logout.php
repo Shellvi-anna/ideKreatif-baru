@@ -1,6 +1,6 @@
 <?php
-session_start();
-session_unset();
-session_destroy();
-header('Location: login.php');
-exit();
+session_start(); // memulai sesi
+session_unset(); // menghapus semua data sesi
+session_destroy(); // menghancurkan sesi sepenuhnya
+header('Location: login.php'); // arahkan pengguna ke halaman login
+exit(); // menghentikan eksekusi script
