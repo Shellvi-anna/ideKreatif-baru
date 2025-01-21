@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
     $sql = " INSERT INTO users (username, name, password)
-    VALUES ('$username', '$name', '$hashedPassword')";
+    VALUES ('$username', '$name', '$password')";
     if ($conn->query($sql) === TRUE) {
 
         $_SESSION['notification'] = [
