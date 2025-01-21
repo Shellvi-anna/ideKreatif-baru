@@ -33,7 +33,7 @@ include '.includes/toast_notification.php';
                      $query = "SELECT * FROM categories";
                      $exec = mysqli_query($conn, $query);
                      while ($category = mysqli_fetch_assoc($exec)) :
-                        ?>
+                ?>
                 <tr>
                     <!-- Menampilkan nomor, nama kategori, dan opsi -->
                         <td><?= $index++; ?></td>
@@ -45,9 +45,9 @@ include '.includes/toast_notification.php';
                             hide-arrow" data-bs-toggle="dropdown">
                             <i class="bx bx-dots-vertical-rounded"></i>
                             </button>
-                            <div class="fropdown-menu">
+                            <div class="dropdown-menu">
                                 <a href="#" class="dropdown-item" data-bs-toggle="modal"
-                                data-bs-target="#editCategory_<?= $category['category_id']; ?>"
+                                data-bs-target="#editCategory_<?= $category['category_id']; ?>">
                                 <a href="#" class="dropdown-item" data-bs-toggle="modal"
                                 data-bs-target="#deleteCategory_<?= $category['category_id']; ?>">
                                     <i class="bx bx-trash me-2"></i> Delete</a>
@@ -67,3 +67,4 @@ include '.includes/toast_notification.php';
      </div>
     </div>
 <?php include '.includes/footer.php'; ?>
+
